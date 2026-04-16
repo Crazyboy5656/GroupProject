@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
+const JPEG_QUALITY = 0.92
+
 export function VerificationPage({ quest, onVerify }) {
   const videoRef = useRef(null)
   const canvasRef = useRef(null)
@@ -55,7 +57,7 @@ export function VerificationPage({ quest, onVerify }) {
     context.font = '16px sans-serif'
     context.fillText(`Captured at ${now}`, 12, canvas.height - 14)
 
-    setCapture(canvas.toDataURL('image/jpeg', 0.92))
+    setCapture(canvas.toDataURL('image/jpeg', JPEG_QUALITY))
     setTimestamp(now)
   }
 

@@ -18,7 +18,7 @@ A full-stack prototype built from the Stitch UI direction for **Side Quest Life*
 
 ### 1) Start backend
 ```bash
-cd /home/runner/work/GroupProject/GroupProject/backend
+cd backend
 npm install
 npm start
 ```
@@ -26,7 +26,7 @@ Backend runs on `http://localhost:4000`.
 
 ### 2) Start frontend
 ```bash
-cd /home/runner/work/GroupProject/GroupProject/frontend
+cd frontend
 npm install
 npm run dev
 ```

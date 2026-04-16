@@ -3,15 +3,19 @@ const { quests, getPrimaryUser, createSubmission } = require('../data/store')
 const { addXp, getProgress } = require('../utils/leveling')
 
 const router = express.Router()
+const MAX_TIMESTAMP_DRIFT_MS = 3 * 60 * 1000
 
 function isFreshTimestamp(rawTimestamp) {
   const submittedAt = new Date(rawTimestamp).getTime()
   if (Number.isNaN(submittedAt)) {
     return false
   }
+  if (submittedAt > Date.now()) {
+    return false
+  }
 
   const drift = Math.abs(Date.now() - submittedAt)
-  return drift <= 3 * 60 * 1000
+  return drift <= MAX_TIMESTAMP_DRIFT_MS
 }
 
 router.post('/:questId', (req, res) => {
