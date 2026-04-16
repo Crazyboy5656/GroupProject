@@ -1,120 +1,76 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
-import './App.css'
+import { Navbar } from './components/Navbar'
+import { useApp } from './context/AppContext'
+import { AuthPanel } from './pages/AuthPanel'
+import { DashboardPage } from './pages/DashboardPage'
+import { ProfilePage } from './pages/ProfilePage'
+import { QuestCreationPage } from './pages/QuestCreationPage'
+import { RewardsPage } from './pages/RewardsPage'
+import { VerificationPage } from './pages/VerificationPage'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [activeTab, setActiveTab] = useState('dashboard')
+  const {
+    user,
+    progress,
+    quests,
+    rewards,
+    loading,
+    error,
+    info,
+    createQuest,
+    moveQuestState,
+    verifyQuest,
+    redeemReward,
+    activeQuestForVerification,
+    setActiveQuestForVerification,
+  } = useApp()
+
+  const handleStart = (questId) => {
+    moveQuestState(questId, 'in_progress')
+  }
+
+  const handleSubmitProof = (questId) => {
+    moveQuestState(questId, 'awaiting_verification')
+    const selected = quests.find((quest) => quest.id === questId)
+    if (selected) {
+      setActiveQuestForVerification({ ...selected, state: 'awaiting_verification' })
+    }
+    setActiveTab('verify')
+  }
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div className="app-shell">
+      <header className="header">
+        <h1>Side Quest Life</h1>
+        <p className="muted">Gamified productivity prototype from Stitch files</p>
+      </header>
 
-      <div className="ticks"></div>
+      <AuthPanel />
 
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
+      {loading ? <p>Loading...</p> : null}
+      {error ? <p className="error-text">{error}</p> : null}
+      {info ? <p className="info-text">{info}</p> : null}
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      {activeTab === 'dashboard' ? (
+        <DashboardPage user={user} progress={progress} quests={quests} onStart={handleStart} onSubmitProof={handleSubmitProof} />
+      ) : null}
+
+      {activeTab === 'create' ? <QuestCreationPage onCreate={createQuest} /> : null}
+
+      {activeTab === 'verify' ? (
+        <VerificationPage
+          quest={activeQuestForVerification}
+          onVerify={verifyQuest}
+        />
+      ) : null}
+
+      {activeTab === 'rewards' ? <RewardsPage rewards={rewards} userXp={user?.xp || 0} onRedeem={redeemReward} /> : null}
+
+      {activeTab === 'profile' ? <ProfilePage user={user} /> : null}
+
+      <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
+    </div>
   )
 }
 
