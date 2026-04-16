@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>QuestMaster Profile - Side Quest Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#ffe16d",
+                        "surface-container-low": "#191933",
+                        "on-primary-fixed-variant": "#004f54",
+                        "surface-container": "#1d1d37",
+                        "primary-fixed-dim": "#00dbe7",
+                        "on-secondary-fixed-variant": "#00522f",
+                        "outline-variant": "#3a494b",
+                        "on-background": "#e2dfff",
+                        "on-secondary-container": "#007243",
+                        "inverse-primary": "#00696f",
+                        "primary-container": "#00f2ff",
+                        "secondary-fixed": "#56ffa8",
+                        "inverse-surface": "#e2dfff",
+                        "surface-dim": "#10102a",
+                        "on-secondary": "#00391f",
+                        "surface-variant": "#32324e",
+                        "outline": "#849495",
+                        "surface-tint": "#00dbe7",
+                        "secondary-container": "#16ff9e",
+                        "primary-fixed": "#74f5ff",
+                        "on-tertiary-fixed": "#221b00",
+                        "error": "#ffb4ab",
+                        "on-primary-container": "#006a71",
+                        "surface-bright": "#363752",
+                        "on-surface": "#e2dfff",
+                        "background": "#10102a",
+                        "secondary-fixed-dim": "#00e38b",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#f5fff4",
+                        "tertiary": "#fff6e4",
+                        "on-primary-fixed": "#002022",
+                        "surface": "#10102a",
+                        "on-secondary-fixed": "#002110",
+                        "tertiary-fixed-dim": "#e9c400",
+                        "surface-container-high": "#272742",
+                        "on-error": "#690005",
+                        "on-tertiary-fixed-variant": "#544600",
+                        "inverse-on-surface": "#2e2e49",
+                        "surface-container-highest": "#32324e",
+                        "on-primary": "#00363a",
+                        "surface-container-lowest": "#0b0b25",
+                        "primary": "#e1fdff",
+                        "on-surface-variant": "#b9cacb",
+                        "tertiary-container": "#ffd81d",
+                        "on-tertiary-container": "#715e00",
+                        "on-tertiary": "#3a3000",
+                        "error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #10102a;
+            color: #e2dfff;
+        }
+        .skill-node-line {
+            background: linear-gradient(to bottom, #00f2ff33, #00f2ff00);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl bg-gradient-to-b from-slate-900 to-transparent shadow-[0_4px_20px_rgba(0,219,231,0.08)] flex items-center justify-between px-6 h-16 w-full">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full overflow-hidden bg-surface-container-high border border-primary-container/20">
+<img alt="Player character portrait" class="w-full h-full object-cover" data-alt="Stylized 3D avatar of a futuristic hero with neon blue accents and sleek dark armor in high detail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBV_pVtHAdeyMjwNS6W2SR7--D2ouVmca5wmN6O5GZfCag0cXWcQWtQCqoMfLPUF9eyBhwsO3BmM2q-JRyA71PeTSF1ynN-wiQFQZuOQbQW67Ek0FFefF4Xy3T-Gap0iEQUP7DgesS4Rvkkl1iEaV1IExL_nknEzLkku7r95PEO3Tvx2HnXDdMIguZXIOj0_vXIaEapuIg8fzEre1iyBBPopHSwvIGuXKIdR6NnUt0E9cskky5QkLbFMvcsOqLHCkk17ZnrSeH_vzdc"/>
+</div>
+<h1 class="text-xl font-bold text-cyan-400 drop-shadow-[0_0_8px_rgba(0,242,255,0.5)] font-headline tracking-wider uppercase">Hero Profile</h1>
+</div>
+<button class="active:scale-95 transition-transform text-slate-400 hover:text-cyan-200 transition-colors duration-300">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-md mx-auto">
+<!-- Hero Section -->
+<section class="flex flex-col items-center mb-10 relative">
+<!-- Background Glow Decor -->
+<div class="absolute -top-10 left-1/2 -translate-x-1/2 w-64 h-64 bg-primary-container/5 rounded-full blur-[80px] -z-10"></div>
+<div class="relative mb-6">
+<div class="w-32 h-32 rounded-full p-1 bg-gradient-to-tr from-primary-container to-secondary-container shadow-[0_0_30px_rgba(0,242,255,0.2)]">
+<div class="w-full h-full rounded-full overflow-hidden bg-surface-container-lowest">
+<img alt="QuestMaster" class="w-full h-full object-cover" data-alt="Close up portrait of a heroic character with luminous skin and tech-enhanced eyes against a deep space background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW4QgsBzb4E6E_P5gBGjBzhtJ8nHNvAW1H9fQZ-PVss51vz-bnNO-2tP7pTVJaq9EVEd-ou_No6kAn9VyF7OqlVztF7AMjmVq6dqePZsl2TOC98E6yF_l3G8v_mC0STrcvpIGc8Vc79wfp2d5En2Mwt5R6bpEAT2EQ45VjYkzL1ryXDEqFMb1dGltRLvDtjcllBxfnQu87T_vD1eslwGQ7fEJbYPm2jbXZeTp3XxvgpQ92te3OzV1ohzzfWPn6yBq_OFzwDMiMpf_k"/>
+</div>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary-container px-4 py-1 rounded-full font-headline font-bold text-xs shadow-[0_0_15px_rgba(0,242,255,0.5)] border border-primary-fixed whitespace-nowrap">
+                    LEVEL 12
+                </div>
+</div>
+<h2 class="text-3xl font-headline font-bold tracking-tight text-primary mb-1">QuestMaster</h2>
+<p class="text-primary-fixed-dim text-sm font-medium tracking-widest uppercase mb-6 opacity-80">Ancient Vanguard</p>
+<!-- XP Progress Bar -->
+<div class="w-full max-w-[280px]">
+<div class="flex justify-between items-end mb-2">
+<span class="text-[10px] font-bold text-on-surface-variant font-headline tracking-widest">XP PROGRESS</span>
+<span class="text-xs font-bold text-primary-container">8,450 / 10,000</span>
+</div>
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary-container w-[84.5%] rounded-full shadow-[0_0_10px_rgba(0,242,255,0.4)]"></div>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-2 gap-4 mb-10">
+<div class="col-span-2 bg-surface-container-low p-5 rounded-DEFAULT shadow-[0_4px_20px_rgba(0,0,0,0.2)] flex items-center justify-between group overflow-hidden relative">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary-container/5 rounded-full -mr-16 -mt-16 blur-2xl"></div>
+<div>
+<p class="text-[10px] font-bold text-on-surface-variant font-headline tracking-widest uppercase mb-1">Total Experience</p>
+<p class="text-2xl font-headline font-bold text-primary">12,450 <span class="text-xs text-primary-fixed-dim ml-1">XP</span></p>
+</div>
+<span class="material-symbols-outlined text-primary-container text-3xl opacity-50">auto_awesome</span>
+</div>
+<div class="bg-surface-container-low p-5 rounded-DEFAULT shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
+<p class="text-[10px] font-bold text-on-surface-variant font-headline tracking-widest uppercase mb-1 text-center">Quests</p>
+<p class="text-2xl font-headline font-bold text-primary text-center">84</p>
+<div class="mt-2 text-[10px] text-secondary-fixed text-center font-bold">+5 this week</div>
+</div>
+<div class="bg-surface-container-low p-5 rounded-DEFAULT shadow-[0_4px_20px_rgba(0,0,0,0.2)]">
+<p class="text-[10px] font-bold text-on-surface-variant font-headline tracking-widest uppercase mb-1 text-center">Streak</p>
+<p class="text-2xl font-headline font-bold text-tertiary-fixed text-center">🔥 7</p>
+<div class="mt-2 text-[10px] text-on-surface-variant text-center font-bold">Day Streak</div>
+</div>
+</section>
+<!-- Skill Tree Preview -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-6">
+<h3 class="text-lg font-headline font-bold text-primary">Skill Tree</h3>
+<button class="text-xs font-bold text-primary-container font-headline tracking-widest uppercase flex items-center gap-1">
+                    Full Map <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg relative overflow-hidden">
+<!-- Grid pattern overlay -->
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none" style="background-image: radial-gradient(#00f2ff 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="flex justify-between relative z-10">
+<!-- Strength Branch -->
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-error/30 flex items-center justify-center text-error shadow-[0_0_15px_rgba(255,180,171,0.1)]">
+<span class="material-symbols-outlined">fitness_center</span>
+</div>
+<div class="h-12 w-[2px] skill-node-line"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-error/50 flex items-center justify-center text-[10px] font-bold">IV</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Strength</span>
+</div>
+<!-- Intelligence Branch (Active) -->
+<div class="flex flex-col items-center gap-4">
+<div class="w-14 h-14 rounded-full bg-primary-container/20 border-2 border-primary-container flex items-center justify-center text-primary-container shadow-[0_0_20px_rgba(0,242,255,0.2)]">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<div class="h-10 w-[2px] bg-primary-container"></div>
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_0_15px_rgba(0,242,255,0.4)]">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-[10px] font-bold text-primary-container uppercase tracking-tighter">Intelligence</span>
+</div>
+<!-- Discipline Branch -->
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-high border border-secondary-container/30 flex items-center justify-center text-secondary-container shadow-[0_0_15px_rgba(22,255,158,0.1)]">
+<span class="material-symbols-outlined">self_improvement</span>
+</div>
+<div class="h-12 w-[2px] skill-node-line"></div>
+<div class="w-8 h-8 rounded-full bg-surface-container-highest border-2 border-secondary-container/50 flex items-center justify-center text-[10px] font-bold">II</div>
+<span class="text-[10px] font-bold text-on-surface-variant uppercase tracking-tighter">Discipline</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Achievements Preview -->
+<section class="mb-10">
+<h3 class="text-lg font-headline font-bold text-primary mb-6">Recent Honors</h3>
+<div class="space-y-3">
+<div class="bg-surface-container p-4 rounded-DEFAULT flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container/10 flex items-center justify-center text-tertiary-container">
+<span class="material-symbols-outlined">military_tech</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Early Bird Rising</p>
+<p class="text-[10px] text-on-surface-variant font-medium">Completed 5 tasks before 8 AM</p>
+</div>
+</div>
+<div class="bg-surface-container p-4 rounded-DEFAULT flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary-container">
+<span class="material-symbols-outlined">bolt</span>
+</div>
+<div>
+<p class="text-sm font-bold text-primary">Focus Master</p>
+<p class="text-[10px] text-on-surface-variant font-medium">4 hours of deep work logged</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 h-20 pb-2 bg-slate-950/90 backdrop-blur-2xl rounded-t-3xl border-t border-cyan-500/10 shadow-[0_-8px_30px_rgba(0,0,0,0.5)]">
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-slate-300 hover:bg-slate-800/50 rounded-full transition-all active:scale-90 duration-200 px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-manrope text-[10px] font-bold tracking-tight">Quest</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-slate-300 hover:bg-slate-800/50 rounded-full transition-all active:scale-90 duration-200 px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-manrope text-[10px] font-bold tracking-tight">Skills</span>
+</a>
+<!-- Active Tab: Profile -->
+<a class="flex flex-col items-center justify-center bg-cyan-500/20 text-cyan-300 rounded-full px-5 py-1 shadow-[0_0_15px_rgba(0,242,255,0.3)] active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-manrope text-[10px] font-bold tracking-tight">Profile</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 hover:text-slate-300 hover:bg-slate-800/50 rounded-full transition-all active:scale-90 duration-200 px-4 py-1" href="#">
+<span class="material-symbols-outlined" data-icon="group">group</span>
+<span class="font-manrope text-[10px] font-bold tracking-tight">Social</span>
+</a>
+</nav>
+</body></html>
