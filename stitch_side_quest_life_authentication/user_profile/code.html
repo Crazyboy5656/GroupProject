@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#f5fff4",
+                    "on-primary-container": "#006a71",
+                    "surface-dim": "#10102a",
+                    "surface-bright": "#363752",
+                    "tertiary-fixed": "#ffe16d",
+                    "on-primary": "#00363a",
+                    "surface-container": "#1d1d37",
+                    "surface-tint": "#00dbe7",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#191933",
+                    "on-primary-fixed": "#002022",
+                    "inverse-on-surface": "#2e2e49",
+                    "tertiary-container": "#ffd81d",
+                    "surface-container-high": "#272742",
+                    "outline-variant": "#3a494b",
+                    "on-surface-variant": "#b9cacb",
+                    "secondary-fixed": "#56ffa8",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "on-tertiary-fixed": "#221b00",
+                    "inverse-surface": "#e2dfff",
+                    "primary-fixed": "#74f5ff",
+                    "on-background": "#e2dfff",
+                    "secondary-fixed-dim": "#00e38b",
+                    "surface-container-lowest": "#0b0b25",
+                    "on-primary-fixed-variant": "#004f54",
+                    "on-surface": "#e2dfff",
+                    "on-secondary-fixed-variant": "#00522f",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-highest": "#32324e",
+                    "surface": "#10102a",
+                    "inverse-primary": "#00696f",
+                    "error": "#ffb4ab",
+                    "primary-container": "#00f2ff",
+                    "on-secondary-container": "#007243",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#715e00",
+                    "on-secondary": "#00391f",
+                    "surface-variant": "#32324e",
+                    "tertiary": "#fff6e4",
+                    "on-tertiary": "#3a3000",
+                    "background": "#10102a",
+                    "secondary-container": "#16ff9e",
+                    "primary": "#e1fdff",
+                    "outline": "#849495",
+                    "on-secondary-fixed": "#002110",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-tertiary-fixed-variant": "#544600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(29, 29, 55, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .text-glow-cyan {
+            text-shadow: 0 0 10px rgba(0, 242, 255, 0.4);
+        }
+        .skill-node-active {
+            box-shadow: 0 0 15px rgba(22, 255, 158, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full shadow-[0_4px_20px_rgba(0,242,255,0.08)]">
+<div class="flex items-center gap-3">
+<div class="relative group cursor-pointer active:scale-95 duration-200">
+<img alt="User Avatar" class="w-10 h-10 rounded-full border-2 border-primary-container p-0.5 object-cover" data-alt="digital portrait of a futuristic nomad with bioluminescent facial markings, soft cyan glowing details, cinematic dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABlFTFh5H6R4e_P_68VrN-dRe9zTgzFLnmMjgLxS2ApSxmnpb0r2tLBi9sImJuakGnvFxchIeHl5t7NdtPMvGwOIUI6sOr9BhRycsbiBSpb9DIicwfqBPj3dS1Wh3xSsGIo12SDWyeOAf0KkSnkD68zOQG5KaPeDCDqtZZ2SL6WDXd1xOHAtAYBERA3kKLyIvJ3R1074WcjazNqQR3o_xP8Zh_xLdd0Mr41ZZxx7k2-MZq99eEuGQQpEn4iNYwoPZFomARsDEym6um"/>
+<div class="absolute -bottom-1 -right-1 bg-secondary-container text-on-secondary-fixed text-[10px] font-bold px-1.5 rounded-full border border-slate-950">
+                    LVL 42
+                </div>
+</div>
+<h1 class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent font-['Space_Grotesk'] tracking-widest uppercase">THE ODYSSEY</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="flex items-center justify-center text-slate-400 hover:text-cyan-200 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<div class="flex items-center gap-1 text-cyan-400 font-headline font-bold">
+<span class="material-symbols-outlined" data-icon="token">token</span>
+<span>1,240</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto space-y-8">
+<!-- Hero Profile Section -->
+<section class="relative flex flex-col items-center text-center space-y-4">
+<div class="relative">
+<div class="absolute inset-0 bg-primary-container/20 blur-3xl rounded-full"></div>
+<img alt="Profile Avatar" class="relative w-32 h-32 rounded-xl object-cover border-4 border-surface-container-highest shadow-2xl" data-alt="Large profile avatar of a high-tech adventurer with glowing neon cyan visor and detailed mechanical armor pieces" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbMR1IWKJPOuZ7UJ_joFPq5W_1QblgGuJPk2nhhs-rCN4f85-dkQT-GSEEUuzSxSq2y4uCPA5DmUbT78iZEJagMHFrIRWlyyrl8pclUeeaz1_akIKfP1PKY2vXTz1CboiCHaZkztku-TXCFT1VhtRJ0ssFgaHcufKSm7OCQ99fJ8tvLZ1Nx6sTcc01spA2AnWskQzGMt3LVsHAq3cS2ZRTGNMSMIw7mfbvXhG2iiou1lr2Za_Y7cWclBWCOpPH4E2hWQEKKIkoe3ke"/>
+<button class="absolute -bottom-2 -right-2 bg-primary-container text-on-primary-container p-2 rounded-full shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-sm" data-icon="edit">edit</span>
+</button>
+</div>
+<div>
+<h2 class="text-3xl font-headline font-bold tracking-tight text-glow-cyan">Aether_Walker</h2>
+<div class="flex items-center justify-center gap-2 mt-1">
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase text-secondary-fixed">Grand Master</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-full text-xs font-bold tracking-widest uppercase text-tertiary-fixed">Season 4 Hero</span>
+</div>
+</div>
+</section>
+<!-- Bento Stats Grid -->
+<section class="grid grid-cols-2 md:grid-cols-3 gap-4">
+<div class="glass-card p-6 rounded-lg border-none col-span-2 md:col-span-1 flex flex-col justify-between min-h-[140px] shadow-[0_8px_30px_rgba(0,219,231,0.05)]">
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest">Total XP</span>
+<div class="space-y-2">
+<div class="text-4xl font-headline font-bold text-primary">84,200</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary-container to-secondary-container w-[72%]"></div>
+</div>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg border-none flex flex-col justify-between min-h-[140px] shadow-[0_8px_30px_rgba(0,219,231,0.05)]">
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest text-secondary-fixed-dim">Quests Done</span>
+<div class="flex items-baseline gap-2">
+<div class="text-4xl font-headline font-bold">152</div>
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="task_alt">task_alt</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg border-none flex flex-col justify-between min-h-[140px] shadow-[0_8px_30px_rgba(0,219,231,0.05)]">
+<span class="text-on-surface-variant font-label text-xs uppercase tracking-widest text-tertiary-fixed">Daily Streak</span>
+<div class="flex items-baseline gap-2">
+<div class="text-4xl font-headline font-bold">7</div>
+<span class="text-sm font-bold text-tertiary-fixed">DAYS</span>
+<span class="material-symbols-outlined text-tertiary-fixed" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+</div>
+</section>
+<!-- Skill Tree Preview -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h3 class="text-xl font-headline font-bold uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-container" data-icon="account_tree">account_tree</span>
+                    Skill Branches
+                </h3>
+<button class="text-primary-fixed text-sm font-bold uppercase tracking-tighter hover:text-cyan-100 transition-colors">View All Skills</button>
+</div>
+<div class="relative glass-card p-8 rounded-lg overflow-hidden border-none bg-surface-container-low">
+<!-- Decorative background elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative z-10">
+<!-- Strength Branch -->
+<div class="flex flex-col items-center gap-6">
+<div class="text-xs font-bold tracking-[0.2em] text-on-surface-variant uppercase">Strength</div>
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant skill-node-active bg-gradient-to-br from-primary-container/30 to-transparent">
+<span class="material-symbols-outlined text-primary-container" data-icon="fitness_center">fitness_center</span>
+</div>
+<div class="w-0.5 h-8 bg-gradient-to-b from-primary-container to-surface-container-highest"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant skill-node-active bg-gradient-to-br from-primary-container/30 to-transparent">
+<span class="material-symbols-outlined text-primary-container" data-icon="shield">shield</span>
+</div>
+<div class="w-0.5 h-8 bg-surface-container-highest"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant opacity-40">
+<span class="material-symbols-outlined" data-icon="swords">swords</span>
+</div>
+</div>
+</div>
+<!-- Intelligence Branch -->
+<div class="flex flex-col items-center gap-6">
+<div class="text-xs font-bold tracking-[0.2em] text-on-surface-variant uppercase">Intelligence</div>
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant skill-node-active bg-gradient-to-br from-secondary-container/30 to-transparent">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="psychology">psychology</span>
+</div>
+<div class="w-0.5 h-8 bg-gradient-to-b from-secondary-container to-surface-container-highest"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant skill-node-active bg-gradient-to-br from-secondary-container/30 to-transparent">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="auto_stories">auto_stories</span>
+</div>
+<div class="w-0.5 h-8 bg-gradient-to-b from-secondary-container to-surface-container-highest"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant skill-node-active bg-gradient-to-br from-secondary-container/30 to-transparent">
+<span class="material-symbols-outlined text-secondary-fixed-dim" data-icon="code">code</span>
+</div>
+</div>
+</div>
+<!-- Discipline Branch -->
+<div class="flex flex-col items-center gap-6">
+<div class="text-xs font-bold tracking-[0.2em] text-on-surface-variant uppercase">Discipline</div>
+<div class="flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant skill-node-active bg-gradient-to-br from-tertiary-container/30 to-transparent">
+<span class="material-symbols-outlined text-tertiary-fixed-dim" data-icon="timer">timer</span>
+</div>
+<div class="w-0.5 h-8 bg-gradient-to-b from-tertiary-container to-surface-container-highest"></div>
+<div class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant opacity-40">
+<span class="material-symbols-outlined" data-icon="self_improvement">self_improvement</span>
+</div>
+<div class="w-0.5 h-8 bg-surface-container-highest"></div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center border border-outline-variant opacity-20">
+<span class="material-symbols-outlined" data-icon="flare">flare</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Current Achievement -->
+<section class="glass-card p-6 rounded-lg flex items-center gap-6 border-none bg-gradient-to-r from-surface-container-low to-transparent">
+<div class="w-20 h-20 shrink-0 bg-tertiary-container/10 flex items-center justify-center rounded-xl border border-tertiary-fixed/20 shadow-[0_0_20px_rgba(255,215,0,0.1)]">
+<span class="material-symbols-outlined text-4xl text-tertiary-fixed" data-icon="military_tech" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<div class="flex-1">
+<div class="text-[10px] font-bold text-tertiary-fixed uppercase tracking-widest mb-1">Active Perk</div>
+<h4 class="text-xl font-headline font-bold text-on-surface">The 7-Day Sentinel</h4>
+<p class="text-sm text-on-surface-variant leading-relaxed">Grants +10% Experience on all Productivity Quests while streak is maintained.</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end pb-6 px-4 bg-slate-950/90 backdrop-blur-2xl rounded-t-[32px] z-50 shadow-[0_-8px_30px_rgba(0,219,231,0.1)]">
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="home">home</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="swords">swords</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter mt-1">Quests</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="verified_user">verified_user</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter mt-1">Verify</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter mt-1">Rewards</span>
+</a>
+<!-- ACTIVE TAB -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-b from-cyan-500/20 to-cyan-500/5 text-cyan-300 rounded-full p-3 mb-2 shadow-[0_0_15px_rgba(0,242,255,0.3)] active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#f5fff4",
+                    "on-primary-container": "#006a71",
+                    "surface-dim": "#10102a",
+                    "surface-bright": "#363752",
+                    "tertiary-fixed": "#ffe16d",
+                    "on-primary": "#00363a",
+                    "surface-container": "#1d1d37",
+                    "surface-tint": "#00dbe7",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#191933",
+                    "on-primary-fixed": "#002022",
+                    "inverse-on-surface": "#2e2e49",
+                    "tertiary-container": "#ffd81d",
+                    "surface-container-high": "#272742",
+                    "outline-variant": "#3a494b",
+                    "on-surface-variant": "#b9cacb",
+                    "secondary-fixed": "#56ffa8",
+                    "tertiary-fixed-dim": "#e9c400",
+                    "on-tertiary-fixed": "#221b00",
+                    "inverse-surface": "#e2dfff",
+                    "primary-fixed": "#74f5ff",
+                    "on-background": "#e2dfff",
+                    "secondary-fixed-dim": "#00e38b",
+                    "surface-container-lowest": "#0b0b25",
+                    "on-primary-fixed-variant": "#004f54",
+                    "on-surface": "#e2dfff",
+                    "on-secondary-fixed-variant": "#00522f",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-highest": "#32324e",
+                    "surface": "#10102a",
+                    "inverse-primary": "#00696f",
+                    "error": "#ffb4ab",
+                    "primary-container": "#00f2ff",
+                    "on-secondary-container": "#007243",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#715e00",
+                    "on-secondary": "#00391f",
+                    "surface-variant": "#32324e",
+                    "tertiary": "#fff6e4",
+                    "on-tertiary": "#3a3000",
+                    "background": "#10102a",
+                    "secondary-container": "#16ff9e",
+                    "primary": "#e1fdff",
+                    "outline": "#849495",
+                    "on-secondary-fixed": "#002110",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-tertiary-fixed-variant": "#544600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(29, 29, 55, 0.6);
+        backdrop-filter: blur(12px);
+      }
+      .gold-glow {
+        box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl shadow-[0_4px_20px_rgba(0,242,255,0.08)] flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-primary-container overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a futuristic digital character with glowing cyan circuit patterns on skin, dark cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt2Mkr4rhU6oAo4KhPKijd2PWlmBjN0Kw39RuLUGFAT0Fz3t7dkp2BdNrchFm1wg9p2QAYSsk1LDefDYo4qsW7U6DrkDlD6_2sFTw-4eU4rXX9uJ2FPMVfD503Q3TB0T0bwptTgdjb0ev5x5ulDlCY68P05TYsO81oSrC2yfHBM66xr1EQi8dqxtsRR20WUQhUWEzuXs2i9zv_GdIfLb4O-dUwrc5tCx_NjgG4DvS_gDeKoqozcWir2SlH4y3JClkJfL6x1njVGVOQ"/>
+</div>
+<h1 class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-200 bg-clip-text text-transparent font-headline tracking-widest uppercase">THE ODYSSEY</h1>
+</div>
+<div class="flex items-center gap-2 text-cyan-400">
+<span class="material-symbols-outlined" data-icon="token">token</span>
+<span class="font-headline font-bold">1240</span>
+</div>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto">
+<!-- Hero Section / XP Card -->
+<section class="mb-12 relative group">
+<div class="absolute -inset-1 bg-gradient-to-r from-tertiary-container to-tertiary-fixed-dim rounded-lg blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
+<div class="relative bg-surface-container-low rounded-lg p-8 flex flex-col md:flex-row justify-between items-center gold-glow overflow-hidden">
+<div class="z-10 text-center md:text-left mb-6 md:mb-0">
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-2 tracking-tight">Rewards</h2>
+<p class="text-on-surface-variant text-lg">Spend your XP on legendary loot.</p>
+</div>
+<div class="z-10 bg-surface-container-highest/50 backdrop-blur-xl p-6 rounded-lg border border-tertiary-container/20 flex flex-col items-center min-w-[240px]">
+<span class="text-tertiary font-label uppercase tracking-[0.2em] text-xs mb-1">Your XP Balance</span>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container text-4xl" data-icon="military_tech" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="text-5xl font-headline font-extrabold text-tertiary-container">1240</span>
+</div>
+</div>
+<!-- Decorative Elements -->
+<div class="absolute right-0 top-0 w-64 h-64 bg-tertiary-container/10 blur-[100px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+</div>
+</section>
+<!-- Categories -->
+<nav class="flex gap-4 mb-10 overflow-x-auto pb-2 scrollbar-hide">
+<button class="px-6 py-2 rounded-full bg-primary-container text-on-primary-container font-bold text-sm whitespace-nowrap shadow-[0_0_15px_rgba(0,242,255,0.3)]">All Rewards</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-bold text-sm whitespace-nowrap">Digital</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-bold text-sm whitespace-nowrap">Gaming</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-high text-on-surface hover:bg-surface-container-highest transition-colors font-bold text-sm whitespace-nowrap">Learning</button>
+</nav>
+<!-- Bento Grid Rewards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Reward Card 1 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="abstract visual representation of music waves in neon purple and cyan against a dark space background, high energy, futuristic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3V2E5Tw-aBsYOCh1y5PXWxB2XhLrPWPlxKhpPy6TkG4OTm2wi9NMPUvst64ik_JZegO2raTWj2KkCQDpXNVdaTu2c-xbis9ucLjtWssWuq2STCGX5aSEb0cJPyINmkV0jDpwGeSwchC6zZdzgLN5oqlO8EIo188jMjQ_CY7n0O1JsNSPPYTIS56FBfz4XfGiQK9odQ2Of0RcOpYCbA_W5TftBLTBkXALnJKBCdTu4b8f7ITmHb7mOAdOL1RK-MeBJ1jj-uKjJivsp"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-secondary-container/30 text-secondary-fixed">Verified Reward</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-headline font-bold">1 Month Subscription</h3>
+<div class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="music_note">music_note</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-6">
+<span class="text-tertiary-container font-headline font-bold text-lg">1000 XP</span>
+<span class="text-on-surface-variant text-xs line-through opacity-50">1200 XP</span>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-1 text-error text-[10px] font-bold uppercase">
+<span class="material-symbols-outlined text-sm" data-icon="bolt">bolt</span>
+                            Limited Stock
+                        </div>
+<button class="px-6 py-3 bg-gradient-to-r from-primary-container to-primary rounded-DEFAULT text-on-primary-container font-extrabold uppercase tracking-widest text-xs active:scale-95 transition-all shadow-[0_4px_15px_rgba(0,242,255,0.2)] group-hover:shadow-[0_4px_25px_rgba(0,242,255,0.4)]">Redeem</button>
+</div>
+</div>
+</div>
+<!-- Reward Card 2 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="high-detail close-up of a futuristic glowing gaming controller button with gold light leaks and deep shadow, hyper-realistic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbN6cAgv8xWIslT6Yk9ig5yQEJ6YpbLoIUUfMegyWy73xLkASrhBU8M6VQstOCRwms0SczFAjLZhdRYM5rOqr8LsT1uYryDTuPuO7-9M-sniA_2jzmy3YmN1Kaj78lFP6THAC8jVEjlsp-SJWtVNUhqAGnKUjrTyBzstYBMVZj25cWgj3jknd7sScK5EnKv9nVpk6hA8_J3kxeMhV3D1ie-fwzHCWvbFMRIMRvVuMXystZiCKl0JPQPytzKZS1m4Twrk6pHrWDTMEl"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-secondary-container/30 text-secondary-fixed">Verified Reward</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-headline font-bold">Pro Gaming Bundle</h3>
+<div class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="sports_esports">sports_esports</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-6 text-tertiary-container">
+<span class="font-headline font-bold text-lg">2500 XP</span>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant text-[10px] font-bold uppercase">
+                            In Stock
+                        </div>
+<button class="px-6 py-3 bg-surface-container-highest border border-primary-container/20 text-primary-container rounded-DEFAULT font-extrabold uppercase tracking-widest text-xs opacity-50 cursor-not-allowed">Insufficient XP</button>
+</div>
+</div>
+</div>
+<!-- Reward Card 3 -->
+<div class="group relative bg-surface-container-low rounded-lg overflow-hidden flex flex-col transition-all duration-300 hover:-translate-y-2">
+<div class="h-48 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="minimalist digital library with floating holographic books and soft golden light, clean futuristic educational aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbKE4AMH9o_Xf8Cef-1gjafZ29GnqKFwj0wexMRB6kfQnQ1khMgGWoI8S1d-Bm91iPhkq5TzzjPzMANWWVHgvOj9oB1wLA0RnBMI0AxFRIQcaRBsrDcNZxmjefFIw91Su8SDCK2IR953KCRqUuWWOsRhE4r2gskcMZYNorKph3wGZYWY9b0Axm6W0rX4dUApDwIo2bzYsmfSDp2VZsoJ21Ei6FWqSmzh8rNT4VeQoMfTWLVEKo3WsYDxMUcW2AGOn8DAs6bIcjZBO7"/>
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-slate-900/80 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider border border-secondary-container/30 text-secondary-fixed">Verified Reward</span>
+</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-headline font-bold">Masterclass Access</h3>
+<div class="w-10 h-10 bg-surface-container-highest rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-container" data-icon="school">school</span>
+</div>
+</div>
+<div class="flex items-center gap-2 mb-6 text-tertiary-container">
+<span class="font-headline font-bold text-lg">800 XP</span>
+</div>
+<div class="mt-auto flex items-center justify-between">
+<div class="flex items-center gap-1 text-on-surface-variant text-[10px] font-bold uppercase">
+                            Popular Choice
+                        </div>
+<button class="px-6 py-3 bg-gradient-to-r from-primary-container to-primary rounded-DEFAULT text-on-primary-container font-extrabold uppercase tracking-widest text-xs active:scale-95 transition-all shadow-[0_4px_15px_rgba(0,242,255,0.2)] group-hover:shadow-[0_4px_25px_rgba(0,242,255,0.4)]">Redeem</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Section -->
+<section class="mt-20 py-12 border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-secondary-container/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-secondary-container text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+<h4 class="font-headline font-bold mb-2">Verified Rewards</h4>
+<p class="text-on-surface-variant text-sm px-6">Every reward is hand-picked and guaranteed to be authentic.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-primary-container text-3xl" data-icon="speed">speed</span>
+</div>
+<h4 class="font-headline font-bold mb-2">Instant Delivery</h4>
+<p class="text-on-surface-variant text-sm px-6">Redeem your codes instantly and start leveling up your life.</p>
+</div>
+<div class="flex flex-col items-center">
+<div class="w-16 h-16 rounded-full bg-tertiary-container/10 flex items-center justify-center mb-4">
+<span class="material-symbols-outlined text-tertiary-container text-3xl" data-icon="lock">lock</span>
+</div>
+<h4 class="font-headline font-bold mb-2">Secure Transactions</h4>
+<p class="text-on-surface-variant text-sm px-6">Your quest progress is safe and encrypted in the Odyssey.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end pb-6 px-4 bg-slate-950/90 backdrop-blur-2xl z-50 rounded-t-[32px] shadow-[0_-8px_30px_rgba(0,219,231,0.1)]">
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="swords">swords</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter">Quests</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="verified_user">verified_user</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter">Verify</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-b from-cyan-500/20 to-cyan-500/5 text-cyan-300 rounded-full p-3 mb-2 shadow-[0_0_15px_rgba(0,242,255,0.3)] hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="military_tech" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 p-3 hover:text-cyan-100 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-['Manrope'] text-[10px] font-bold uppercase tracking-tighter">Profile</span>
+</a>
+</nav>
+</body></html>

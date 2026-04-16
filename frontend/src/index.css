@@ -1,0 +1,166 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #e7eaff;
+  background: radial-gradient(circle at top, #1f2147, #101029 60%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #00d8ff, #6f7bff);
+  color: #06111b;
+  font-weight: 700;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+input,
+textarea,
+select {
+  border: 1px solid #32385f;
+  border-radius: 10px;
+  padding: 0.6rem;
+  background: #171a37;
+  color: #e7eaff;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.app-shell {
+  width: min(900px, 100% - 2rem);
+  margin: 1rem auto 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.panel {
+  background: rgba(25, 29, 58, 0.82);
+  border: 1px solid #2e3563;
+  border-radius: 14px;
+  padding: 1rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.muted {
+  color: #adb4e3;
+  font-size: 0.92rem;
+}
+
+.badge {
+  border: 1px solid #395881;
+  color: #9fe6ff;
+  border-radius: 999px;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.attributes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.xp-track {
+  margin-top: 0.4rem;
+  background: #2a315c;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 12px;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #00cfff, #5effba);
+}
+
+.error-text {
+  color: #ffb4bd;
+}
+
+.info-text {
+  color: #9fffc4;
+}
+
+.camera,
+.preview {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #36407a;
+  background: #0f1332;
+}
+
+.hidden {
+  display: none;
+}
+
+.nav-grid {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.4rem;
+  padding: 0.7rem;
+  background: rgba(10, 12, 31, 0.95);
+  border-top: 1px solid #2f3560;
+}
+
+.nav-tab {
+  background: #1a1f47;
+  color: #b9c0ee;
+  font-size: 0.75rem;
+  padding: 0.5rem;
+}
+
+.nav-tab.active {
+  background: linear-gradient(135deg, #00d8ff, #5f6fff);
+  color: #041423;
+}

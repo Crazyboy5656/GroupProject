@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Side Quest Life - Verification</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#e9c400",
+                    "on-tertiary-fixed": "#221b00",
+                    "on-surface-variant": "#b9cacb",
+                    "secondary-fixed": "#56ffa8",
+                    "tertiary-container": "#ffd81d",
+                    "surface-container-high": "#272742",
+                    "outline-variant": "#3a494b",
+                    "surface-tint": "#00dbe7",
+                    "error-container": "#93000a",
+                    "surface-container-low": "#191933",
+                    "on-primary-fixed": "#002022",
+                    "inverse-on-surface": "#2e2e49",
+                    "surface-container": "#1d1d37",
+                    "surface-bright": "#363752",
+                    "tertiary-fixed": "#ffe16d",
+                    "on-primary": "#00363a",
+                    "surface-dim": "#10102a",
+                    "secondary": "#f5fff4",
+                    "on-primary-container": "#006a71",
+                    "on-surface": "#e2dfff",
+                    "surface-container-lowest": "#0b0b25",
+                    "on-primary-fixed-variant": "#004f54",
+                    "secondary-fixed-dim": "#00e38b",
+                    "on-background": "#e2dfff",
+                    "primary-fixed": "#74f5ff",
+                    "inverse-surface": "#e2dfff",
+                    "on-secondary-container": "#007243",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#715e00",
+                    "primary-container": "#00f2ff",
+                    "error": "#ffb4ab",
+                    "surface": "#10102a",
+                    "inverse-primary": "#00696f",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-highest": "#32324e",
+                    "on-secondary-fixed-variant": "#00522f",
+                    "secondary-container": "#16ff9e",
+                    "primary": "#e1fdff",
+                    "outline": "#849495",
+                    "on-secondary-fixed": "#002110",
+                    "primary-fixed-dim": "#00dbe7",
+                    "on-tertiary-fixed-variant": "#544600",
+                    "background": "#10102a",
+                    "on-tertiary": "#3a3000",
+                    "surface-variant": "#32324e",
+                    "tertiary": "#fff6e4",
+                    "on-secondary": "#00391f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Space Grotesk"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .perspective-1000 { perspective: 1000px; }
+        .glass-panel {
+            background: rgba(16, 16, 42, 0.4);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .camera-overlay-frame {
+            box-shadow: 0 0 0 9999px rgba(11, 11, 37, 0.6);
+        }
+        .scanning-line {
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #00f2ff, transparent);
+            box-shadow: 0 0 15px #00f2ff;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container overflow-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur-xl flex items-center justify-between px-6 h-16 w-full shadow-[0_0_20px_rgba(0,242,255,0.08)]">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 text-cyan-400">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="font-['Space_Grotesk'] tracking-widest uppercase text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-cyan-100">QUEST VERIFICATION</h1>
+</div>
+<button class="active:scale-95 duration-200 text-cyan-400">
+<span class="material-symbols-outlined">help</span>
+</button>
+</header>
+<main class="relative h-screen w-full flex flex-col pt-16 pb-24">
+<!-- Live Camera Container -->
+<section class="relative flex-1 w-full overflow-hidden flex items-center justify-center">
+<!-- Simulated Camera Feed -->
+<div class="absolute inset-0 z-0">
+<img alt="Desk with notebook and coffee" class="w-full h-full object-cover grayscale-[0.2] brightness-75" data-alt="First-person view of a wooden desk with an open notebook, pen, and coffee mug, cinematic moody lighting, deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwtUjisj5Zxdc_6hskYvNj8AZxCTf9zPwmjbK3M1zo8Ws81UDsdIiqnhKgXY_mj1zHZpCidQlPGSbrco8GjEv5HtnTXo3wEsiLVp5mMhygmhE5C1hpHbQr1pDGzG6xWpPvaPEOk6ansZ5lCRJAFCLwuUeUnzaJB6cd7cfes9S3QCdZHW1dJ9u76lAEN1bbPjVAm406wl4O-cIXSgtfstv_oFt97je2IhFYxRlPowd0enC3Ekc9oJsIAp4kerPs7cZ61hHMCekq17na"/>
+<!-- Scanning Effect (Active State visualization) -->
+<div class="absolute inset-x-0 top-1/4 z-30 scanning-line opacity-80 animate-bounce transition-all duration-1000"></div>
+<!-- Analyzing Overlay -->
+<div class="absolute inset-0 z-40 flex items-center justify-center bg-surface-container-lowest/40 backdrop-blur-[2px]">
+<div class="flex flex-col items-center gap-4 px-8 py-6 rounded-lg glass-panel border border-primary-container/10">
+<div class="w-12 h-12 border-4 border-primary-container/20 border-t-primary-container rounded-full animate-spin"></div>
+<span class="font-headline tracking-widest text-primary-fixed uppercase text-sm">Analyzing...</span>
+</div>
+</div>
+</div>
+<!-- Frame Guide Overlay -->
+<div class="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+<div class="w-[85%] aspect-[3/4] max-h-[618px] rounded-lg camera-overlay-frame relative border-2 border-primary-container/30">
+<!-- Corner Accents -->
+<div class="absolute -top-1 -left-1 w-8 h-8 border-t-4 border-l-4 border-primary-container rounded-tl-md"></div>
+<div class="absolute -top-1 -right-1 w-8 h-8 border-t-4 border-r-4 border-primary-container rounded-tr-md"></div>
+<div class="absolute -bottom-1 -left-1 w-8 h-8 border-b-4 border-l-4 border-primary-container rounded-bl-md"></div>
+<div class="absolute -bottom-1 -right-1 w-8 h-8 border-b-4 border-r-4 border-primary-container rounded-br-md"></div>
+</div>
+</div>
+<!-- Anti-Fraud & Meta Info -->
+<div class="absolute inset-0 z-20 p-6 flex flex-col justify-between pointer-events-none">
+<div class="flex justify-between items-start">
+<div class="flex flex-col gap-1">
+<div class="bg-error-container/80 text-on-error-container px-3 py-1 rounded-full flex items-center gap-2 backdrop-blur-md">
+<span class="w-2 h-2 bg-error rounded-full animate-pulse shadow-[0_0_8px_#ffb4ab]"></span>
+<span class="font-label text-[10px] font-bold uppercase tracking-tighter">Live capture only</span>
+</div>
+<div class="text-on-surface-variant font-mono text-[10px] tracking-widest opacity-60">
+                            STAMP: 2023-11-24 // 14:42:08 // UTC-5
+                        </div>
+</div>
+<div class="bg-surface-container-highest/80 backdrop-blur-md px-3 py-1 rounded-full border border-primary-fixed/20">
+<span class="font-label text-[10px] text-primary-fixed font-medium uppercase tracking-widest">AI verification active</span>
+</div>
+</div>
+<!-- Bottom Feedback (Success Toast) -->
+<div class="w-full flex justify-center mb-12">
+<div class="bg-secondary-container text-on-secondary-container px-6 py-3 rounded-full flex items-center gap-3 shadow-[0_8px_30px_rgba(0,255,157,0.3)] border border-on-secondary-container/20">
+<span class="material-symbols-outlined font-bold">check_circle</span>
+<span class="font-headline font-bold text-sm tracking-wide">Verified ✔ +50 XP</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Instructions & Controls Canvas -->
+<section class="bg-surface-dim pt-8 pb-12 px-6 flex flex-col items-center gap-8 relative z-50">
+<div class="text-center">
+<h2 class="font-headline text-xl text-on-surface font-bold tracking-tight">Take a clear photo of your completed task</h2>
+<p class="font-body text-sm text-on-surface-variant mt-2">Align your work within the frame</p>
+</div>
+<div class="flex items-center justify-between w-full max-w-sm gap-4">
+<!-- Retake (Ghost Button) -->
+<button class="flex-1 py-4 font-headline text-xs font-bold tracking-widest uppercase text-on-surface-variant border border-outline-variant rounded-DEFAULT active:scale-95 transition-all">
+                    Retake
+                </button>
+<!-- Capture Button -->
+<button class="relative group">
+<div class="absolute -inset-4 bg-primary-container/20 rounded-full blur-xl group-active:scale-125 transition-all"></div>
+<div class="w-20 h-20 rounded-full border-4 border-primary-container p-1 bg-transparent flex items-center justify-center active:scale-90 transition-transform">
+<div class="w-full h-full rounded-full bg-gradient-to-br from-primary-container to-surface-tint shadow-[0_0_20px_rgba(0,242,255,0.4)]"></div>
+</div>
+</button>
+<!-- Submit Proof (Disabled State) -->
+<button class="flex-1 py-4 font-headline text-xs font-bold tracking-widest uppercase text-slate-500 bg-surface-container rounded-DEFAULT cursor-not-allowed opacity-60">
+                    Submit Proof
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-8 pb-6 pt-4 bg-slate-950/90 backdrop-blur-2xl rounded-t-[32px] shadow-[0_-8px_30px_rgba(0,0,0,0.5)]">
+<button class="text-slate-500 p-3 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">swords</span>
+</button>
+<button class="text-slate-500 p-3 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">auto_awesome</span>
+</button>
+<button class="bg-gradient-to-br from-cyan-400 to-blue-500 text-slate-950 rounded-full p-3 shadow-[0_0_15px_rgba(0,242,255,0.5)] active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">camera</span>
+</button>
+<button class="text-slate-500 p-3 hover:text-cyan-300 transition-all active:scale-90 duration-300 ease-out">
+<span class="material-symbols-outlined">person</span>
+</button>
+</nav>
+</body></html>
